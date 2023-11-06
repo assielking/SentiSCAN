@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Styles pour l'effet visuel d'affichage de l'émotion */
+        .emotion-display {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .emotion-emoji {
+            font-size: 48px;
+        }
+ 
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <h1 class="text-center mt-4">Détection </h1>
+
+        <div class="row align-center">
+            <form method="POST" action="/" class="col-md-8 flex-column mx-auto text-center">
+                <div class="col-md-6 offset-md-3">
+                    <div class="form-group">
+                        <label for="comment">Commentaire :</label>
+                        <textarea class="form-control" id="comment" rows="3" placeholder="Saisissez votre commentaire ici..." name="comment"></textarea>
+                    </div>
+    
+                    <button class="btn btn-primary btn-block mt-3" id="submit-button" onclick="" type="submit">Soumettre</button>
+    
+                    <div class="mt-4 emotion-display">
+                        <div class="mt-4 emotion-display">
+                            {% if sent == 'anger' %}
+                                <div class="emotion-emoji">&#x1F621;</div> <!-- Emoji pour la colère -->
+                            {% elif sent == 'boredom' %}
+                                <div class="emotion-emoji">&#x1F611;</div> <!-- Emoji pour l'ennui -->
+                            {% elif sent == 'empty' %}
+                                <div class="emotion-emoji">&#x1F636;</div> <!-- Emoji pour le vide -->
+                            {% elif sent == 'enthusiasm' %}
+                                <div class="emotion-emoji">&#x1F604;</div> <!-- Emoji pour l'enthousiasme -->
+                            {% elif sent == 'fun' %}
+                                <div class="emotion-emoji">&#x1F601;</div> <!-- Emoji pour le plaisir -->
+                            {% elif sent == 'happiness' %}
+                                <div class="emotion-emoji">&#x1F603;</div> <!-- Emoji pour le bonheur -->
+                            {% elif sent == 'hate' %}
+                                <div class "emotion-emoji">&#x1F620;</div> <!-- Emoji pour la haine -->
+                            {% elif sent == 'love' %}
+                                <div class="emotion-emoji">&#x2764;</div> <!-- Emoji pour l'amour -->
+                            {% elif sent == 'neutral' %}
+                                <div class="emotion-emoji">&#x1F610;</div> <!-- Emoji pour la neutralité -->
+                            {% elif sent == 'relief' %}
+                                <div class="emotion-emoji">&#x1F605;</div> <!-- Emoji pour le soulagement -->
+                            {% elif sent == 'sadness' %}
+                                <div class="emotion-emoji">&#x1F622;</div> <!-- Emoji pour la tristesse -->
+                            {% elif sent == 'surprise' %}
+                                <div class="emotion-emoji">&#x1F62E;</div> <!-- Emoji pour la surprise -->
+                            {% elif sent == 'worry' %}
+                                <div class="emotion-emoji">&#x1F630;</div> <!-- Emoji pour l'inquiétude -->
+                            {% else %}
+                                <!-- Emoji par défaut si sent n'a pas de correspondance -->
+                                <div class="emotion-emoji">&#x1F610;</div>
+                            {% endif %}
+                        </div>
+                        
+                        {% if sent %}<p>{{ sent }} </p>{% endif %}
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

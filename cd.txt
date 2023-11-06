@@ -1,0 +1,11 @@
+
+
+uvicorn main:app --reload
+
+http://127.0.0.1:8000
+
+crtl c pour arreter le serveur
+
+dans visual code dans le terminal : python -m venv .venv
+
+

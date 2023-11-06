@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(choco.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    font-size: 40px;
+    color: white;
+    margin-top: 250px;
+}
+p{
+    font-size: 17px;
+    color: white;
+}
+label{
+    font-size: 17px;
+    color: white;
+}
+.ss{
+    margin: auto; width: 220px
+}
+.glyphicon-pencil{
+    font-size: 35;
+    color: white;
+    float: right;
+    margin-top: 20px;
+    
+    
+}
+form{
+    border: 1px;
+}
+.formulaire{
+    margin-top: 80px;
+    box-shadow: -1px 1px 60px 10px black;
+    background: rgba(0, 0,0, 0.4);
+}
+.t{
+    color: azure;
+}
+.lab{
+    font-weight: normal;
+    margin-top: 15px;
+    color: white;
+    font-size: 19px;
+}
+.form-control{
+    background: transparent;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 0px solid white;
+    font-size: 18px;
+    margin-top: 15px;
+    height: 40px;
+    color: white;
+
+}
+input[type="checkbox"]{
+    margin-top: 15px;
+    width: 15px;
+    height: 15px;
+}
+small{
+    font-size: 18px;
+} 
+input[type="radio"]{
+    margin-top: 22px;
+}
+option{
+    color: gray;
+}
+.btn-info{
+    margin-top: 20px;
+    font-size: 18px;
+    width: 120px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+.btn-warning{
+    margin-top: 20px;
+    font-size: 18px;
+    width: 120px;
+    margin-bottom: 20px;
+}
+#erra{color: red;}
